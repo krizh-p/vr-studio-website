@@ -5,76 +5,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rotten Apples</title>
-    <!-- Required Core Stylesheet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
+
+    <style>
+
+        body {
+            overflow-x: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content h1 {
+                font-size: 3rem;
+            }
+            .content h2 {
+                font-size: 1.6rem;
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+            .content p {
+                font-size: 1.2rem;
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="bird-container">
-        <div class="content">
-            <h1>Rotten Apples</h1>
-        </div>
-        <div class="content">
-            <h2>Virtual Reality is our core.</h2>
-        </div>
+    <div id="bird-container" class="content">
+        <h1>Rotten Apples</h1>
+        <h2>Virtual Reality is our core.</h2>
     </div>
 
-    <div id="fog-container" style="height: 150vh">
-        <div class="content">
-            <h1 style="color: tomato;">Projects</h1>
-        </div>
-
-        <div class="content">
-            <h2 style="color: aliceblue; font-size: 300%;">CS452: VR ESCAPE</h2>
-        </div>
-
-        <div class="content">
-            <p style="margin-left: 2em; margin-right: 2em;">Immerse yourself in the mystical world of "PROJECT TITLE,"
-                a virtual reality escape room game designed to challenge your wit and puzzle-solving skills.
-            </p>
-            <p style="margin-left: 2em; margin-right: 2em;">
-                Step into a fantasy realm filled with magic and intrigue as you navigate through intricately designed
-                rooms, solving puzzles that blend creativity and logic.
-            </p>
-            <p style="margin-left: 2em; margin-right: 2em;">
-                The game employs a user-friendly interface, allowing seamless interaction with objects and puzzles in a
-                VR environment.</p>
-            </p>
-        </div>
-        <div class="content" style="padding-top: 7%;">
+    <div id="fog-container" style="overflow: hidden;" class="content">
+        <h1 style="color: tomato;">Projects</h1>
+        <h2 style="color: aliceblue; font-size: 3rem;">VR ESCAPE</h2>
+        <p>Immerse yourself in the mystical world of "PROJECT TITLE," a virtual reality escape room game designed to challenge your wit and puzzle-solving skills.</p>
+        <!-- Other paragraphs -->
+        <div style="padding-top: 7%;">
             <div style="height: 50vh; width: 50vh;">
                 <div class="glide">
-
                     <div class="glide__track" data-glide-el="track">
                         <div class="glide__slides" data-glide-el="slides">
+                            <!-- Glide slides -->
                             <img class="glide__slide"
                                 src="https://source.unsplash.com/random/1920x1080/?virtual+reality+headset">
                             <img class="glide__slide" src="https://source.unsplash.com/random/1920x1080/?augmented+reality">
                             <img class="glide__slide" src="https://source.unsplash.com/random/1920x1080/?3d">
                         </div>
                     </div>
-
                     <div class="glide__arrows" style="padding: 1rem;" data-glide-el="controls">
                         <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
                         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Initialize Vanta.js with the birds effect
         VANTA.BIRDS({
             el: "#bird-container",
             backgroundColor: 0x1e1e1e,
@@ -99,7 +96,6 @@
             highlightColor: 0x0,
             midtoneColor: 0x0,
             lowlightColor: 0xff6347,
-            // baseColor: 0xff6347,
             baseColor: 0x1e1e1e,
             blurFactor: 0.90,
             speed: 5.00,
