@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    color: aliceblue;
+    overflow-x: hidden;
+}
+
+#bird-container,
+#abstract-container,
+#fog-container {
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6347;
+}
+
+.content h1 {
+    font-size: 900%;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+    color: #ff6347;
+}
+
+.content p {
+    font-size: 150%;
+}
