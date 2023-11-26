@@ -2,103 +2,181 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rotten Apples</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanta.js Integration with Bootstrap</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Glide.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
 
+    <!-- Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
-
     <style>
-        body {
+        html {
             overflow-x: hidden;
+            background-color: #ff6347;
         }
 
-        @media screen and (max-width: 768px) {
-            .content h1 {
-                font-size: 3rem;
-            }
+        h1 {
+            font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+            color: #ff6347;
+            font-size: 7em;
+        }
 
-            .content h2 {
-                font-size: 1.6rem;
-                margin-left: .5rem;
-                margin-right: .5rem;
-            }
+        @media (max-width: 768px) {
 
-            .content p {
-                font-size: 1.2rem;
-                margin-left: .5rem;
-                margin-right: .5rem;
+            /* Styles for screens up to 768px width */
+            h1 {
+                font-size: 5em;
+                /* Adjusted font size for smaller screens */
             }
+        }
+
+        @media (max-width: 576px) {
+
+            /* Styles for screens up to 576px width */
+            h1 {
+                font-size: 3.75em;
+                /* Further adjusted font size for even smaller screens */
+            }
+        }
+
+        h2 {
+            color: aliceblue;
+            font-size: 2em;
+        }
+
+        p {
+            color: aliceblue;
+        }
+
+        .custom-img {
+            max-width: 200px;
+            /* Set a maximum width */
+            height: auto;
+            /* Maintain aspect ratio */
         }
     </style>
 </head>
 
 <body>
-    <div id="bird-container" class="content">
-        <img src="assets/logo.png" style="height: 13em; width: 13em;">
-        <h1>Rotten Apples</h1>
-        <h2>Virtual Reality is our core.</h2>
-    </div>
 
-    <div id="fog-container" style="overflow: hidden; height: 180vh;" class="content">
-        <h1 style="color: #ff6347;">Projects</h1>
-        <h2 style="color: aliceblue; font-size: 3rem;">VR ESCAPE</h2>
-        <p>Immerse yourself in the mystical world of "PROJECT TITLE," a virtual reality escape room game designed to
-            challenge your wit and puzzle-solving skills.</p>
-        <!-- Other paragraphs -->
-        <div style="padding-top: 7%;">
-            <div style="height: 50vh; width: 50vh;">
-                <div class="glide">
-                    <div class="glide__track" data-glide-el="track">
-                        <div class="glide__slides" data-glide-el="slides">
-                            <!-- Glide slides -->
-                            <img class="glide__slide"
-                                src="https://source.unsplash.com/random/1920x1080/?virtual+reality+headset">
-                            <img class="glide__slide"
-                                src="https://source.unsplash.com/random/1920x1080/?augmented+reality">
-                            <img class="glide__slide" src="https://source.unsplash.com/random/1920x1080/?3d">
-                        </div>
-                    </div>
-                    <div class="glide__arrows" style="padding: 1rem;" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                    </div>
+    <!-- Landing page -->
+    <div id="bird-container">
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="row my-custom-row text-center">
+                <div class="col">
+                    <img src="assets/logo2.png" class="img-fluid custom-img" alt="Logo">
+                    <h1>Rotten Apples</h1>
+                    <h2>Virtual Reality is our <span style="color: #ff6347;">core.</span></h2>
                 </div>
             </div>
         </div>
-
-        <h2 style="color: aliceblue; font-size: 3rem;">Abstract</h2>
-
-        <p>
-            The VR Escape Room by the Rotten Apples team is an immersive experience designed to challenge and captivate users in a fantastical world of puzzles and mystery. With a focus on user interaction and problem-solving, this app transports players into an intricately themed escape room adventure.
-        </p>
-        <p>
-            Utilizing Unity and XR technologies, the app offers seamless player movement, allowing for fluid exploration through thoughtful design choices. Through intuitive controls and minimal UI, users engage directly with the environment, picking up objects, solving puzzles, and unlocking clues to progress.
-        </p>
-        <p>
-            The meticulously crafted rooms, themed around fantasy and magic, house a series of stimulating puzzles—ranging from code safes and dial manipulations to hidden hints and object placements—all aimed at challenging intellect and creativity. The interconnected puzzles between Room 1 and Room 2 create a dynamic narrative, with the final escape puzzle requiring elements from both spaces for completion.
-        </p>
     </div>
 
-    <div id="fog-container" style="overflow: hidden; height: 170vh;" class="content">
-        <h1 style="color: black;">Meet The Team</h1>
-        <h2 style="color: aliceblue; font-size: 3rem;"></h2>
+    <!-- Projects -->
+    <div id="fog-container">
+        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="row my-custom-row text-center">
+                <div class="col">
 
-        <div id="two-team-card">
+                    <!-- Projects header -->
+                    <div>
+                        <h1 style="color: #ff6347; padding-bottom: .6em;">Projects</h1>
+                        <h2 style="color: aliceblue; font-size: 3rem; padding-bottom: .25em;">VR ESCAPE</h2>
+                        <p style="color: white;">Immerse yourself in the mystical world of "PROJECT TITLE," a virtual
+                            reality escape room game designed to
+                            challenge your wit and puzzle-solving skills.
+                        </p>
+                    </div>
+
+                    <!-- Abstract -->
+                    <div>
+
+                        <h2 style="color: aliceblue; font-size: 3rem;">Abstract</h2>
+
+                        <p>
+                            The VR Escape Room by the Rotten Apples team is an immersive experience designed to
+                            challenge
+                            and captivate users in a fantastical world of puzzles and mystery. With a focus on user
+                            interaction and problem-solving, this app transports players into an intricately themed
+                            escape
+                            room adventure.
+                        </p>
+                        <p>
+                            Utilizing Unity and XR technologies, the app offers seamless player movement, allowing for
+                            fluid
+                            exploration through thoughtful design choices. Through intuitive controls and minimal UI,
+                            users
+                            engage directly with the environment, picking up objects, solving puzzles, and unlocking
+                            clues
+                            to progress.
+                        </p>
+                        <p>
+                            The meticulously crafted rooms, themed around fantasy and magic, house a series of
+                            stimulating
+                            puzzles—ranging from code safes and dial manipulations to hidden hints and object
+                            placements—all
+                            aimed at challenging intellect and creativity. The interconnected puzzles between Room 1 and
+                            Room 2 create a dynamic narrative, with the final escape puzzle requiring elements from both
+                            spaces for completion.
+                        </p>
+                    </div>
+
+                    <!-- Glide.js image carousel -->
+                    <div class="d-flex justify-content-center" style="padding: 1em;">
+                        <div style="width: 30vh;">
+                            <div class="glide">
+                                <div class="glide__track" data-glide-el="track">
+                                    <div class="glide__slides" data-glide-el="slides">
+                                        <!-- Glide slides -->
+                                        <img class="glide__slide"
+                                            src="https://source.unsplash.com/random/1920x1080/?virtual+reality+headset">
+                                        <img class="glide__slide"
+                                            src="https://source.unsplash.com/random/1920x1080/?augmented+reality">
+                                        <img class="glide__slide"
+                                            src="https://source.unsplash.com/random/1920x1080/?3d">
+                                    </div>
+                                </div>
+                                <div class="glide__arrows" style="padding: 1rem;" data-glide-el="controls">
+                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet the team -->
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #ff6347;">
+        <div class="row my-custom-row text-center">
+            <h1 style="color: black;">Meet The Team</h1>
+        </div>
+
+        <div class="row my-custom-row text-center">
             <div id="person-card">
                 <!-- Person Card -->
                 <img src="assets/kp_icon.jpg" alt="Person"
                     style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                 <h2>Krishna Purohit</h2>
                 <p>Lead Level Designer and VR Developer</p>
-                <p>Krishna is a currently pursuing a Bachelors of Computer Science at George Mason University's Honors College. He also teaches CS395, Full Stack Web Development, part-time in the CEC.</p>
+                <p>Krishna is a currently pursuing a Bachelors of Computer Science at George Mason University's Honors
+                    College. He also teaches CS395, Full Stack Web Development, part-time in the CEC.</p>
             </div>
             <div id="person-card">
                 <!-- Person Card -->
@@ -107,14 +185,15 @@
                 <h2>Siraj S.</h2>
                 <p>Executive Producer</p>
                 <p>
-                    Siraj is an Applied Computer Science major at George Mason University, focusing in game design, with career aspirations in being a Producer and Game Designer." 
+                    Siraj is an Applied Computer Science major at George Mason University, focusing in game design, with
+                    career aspirations in being a Producer and Game Designer."
                 </p>
             </div>
         </div>
-        <div id="two-team-card">
+        <div class="row my-custom-row text-center">
             <div id="person-card">
                 <!-- Person Card -->
-                <img src="https://source.unsplash.com/random/800x800/?person" alt="Person"
+                <img src="assets/kj_icon.jpg" alt="Person"
                     style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                 <h2>Kavon J</h2>
                 <p>Lead VR Developer</p>
@@ -125,7 +204,7 @@
             </div>
             <div id="person-card">
                 <!-- Person Card -->
-                <img src="https://source.unsplash.com/random/800x800/?person" alt="Person"
+                <img src="assets/hs_icon.jpg" alt="Person"
                     style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                 <h2>Huy S.</h2>
                 <p>Lead VR Developer</p>
@@ -141,9 +220,9 @@
         VANTA.BIRDS({
             el: "#bird-container",
             backgroundColor: 0x1e1e1e,
-            // color2: 0x69ff47,
             color1: 0xff6347,
-            color2: 0xff6347,
+            // color2: 0xff6347,
+            // color2: 0x69ff47,
             mouseControls: true,
             touchControls: true,
             gyroControls: true,
@@ -151,7 +230,7 @@
             minWidth: 200.0,
             scale: 1.0,
             scaleMobile: 1.0,
-            quantity: 4.0,
+            quantity: 3.0,
         });
         VANTA.FOG({
             el: "#fog-container",
