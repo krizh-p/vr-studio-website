@@ -25,7 +25,6 @@
     <style>
         html {
             overflow-x: hidden;
-            background-color: #ff6347;
         }
 
         h1 {
@@ -50,6 +49,16 @@
                 font-size: 3.75em;
                 /* Further adjusted font size for even smaller screens */
             }
+        }
+        
+        @media (max-width: 432px) {
+
+            /* Styles for screens up to 576px width */
+            h1 {
+                font-size: 4em;
+                /* Further adjusted font size for even smaller screens */
+            }
+
         }
 
         h2 {
@@ -87,22 +96,22 @@
 
     <!-- Projects -->
     <div id="fog-container">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
             <div class="row my-custom-row text-center">
                 <div class="col">
 
                     <!-- Projects header -->
-                    <div>
-                        <h1 style="color: #ff6347; padding-bottom: .6em;">Projects</h1>
+                    
+                        <h1 style="color: #ff6347; padding-bottom: .2em;">Projects</h1>
                         <h2 style="color: aliceblue; font-size: 3rem; padding-bottom: .25em;">VR ESCAPE</h2>
                         <p style="color: white;">Immerse yourself in the mystical world of "PROJECT TITLE," a virtual
                             reality escape room game designed to
                             challenge your wit and puzzle-solving skills.
                         </p>
-                    </div>
+                    
 
                     <!-- Abstract -->
-                    <div>
+                    
 
                         <h2 style="color: aliceblue; font-size: 3rem;">Abstract</h2>
 
@@ -132,11 +141,11 @@
                             Room 2 create a dynamic narrative, with the final escape puzzle requiring elements from both
                             spaces for completion.
                         </p>
-                    </div>
+                    
 
                     <!-- Glide.js image carousel -->
-                    <div class="d-flex justify-content-center" style="padding: 1em;">
-                        <div style="width: 30vh;">
+                    <div class="d-flex justify-content-center">
+                        <div style="width: 40vh;">
                             <div class="glide">
                                 <div class="glide__track" data-glide-el="track">
                                     <div class="glide__slides" data-glide-el="slides">
@@ -149,7 +158,7 @@
                                             src="https://source.unsplash.com/random/1920x1080/?3d">
                                     </div>
                                 </div>
-                                <div class="glide__arrows" style="padding: 1rem;" data-glide-el="controls">
+                                <div class="glide__arrows" data-glide-el="controls">
                                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
                                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                                 </div>
@@ -163,58 +172,52 @@
     </div>
 
     <!-- Meet the team -->
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #ff6347;">
-        <div class="row my-custom-row text-center">
+<div class="container-fluid" style="background-color: #ff6347;">
+    <div class="row text-center">
+        <div class="col-12">
             <h1 style="color: black;">Meet The Team</h1>
         </div>
+    </div>
 
-        <div class="row my-custom-row text-center">
+    <div class="row text-center">
+        <div class="col-md-6"> <!-- Use col-md-6 to create two columns on medium-sized screens -->
             <div id="person-card">
-                <!-- Person Card -->
-                <img src="assets/kp_icon.jpg" alt="Person"
-                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+                <img src="assets/kp_icon.jpg" alt="Person" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                 <h2>Krishna Purohit</h2>
                 <p>Lead Level Designer and VR Developer</p>
-                <p>Krishna is a currently pursuing a Bachelors of Computer Science at George Mason University's Honors
-                    College. He also teaches CS395, Full Stack Web Development, part-time in the CEC.</p>
-            </div>
-            <div id="person-card">
-                <!-- Person Card -->
-                <img src="assets/ss_icon.jpg" alt="Person"
-                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-                <h2>Siraj S.</h2>
-                <p>Executive Producer</p>
-                <p>
-                    Siraj is an Applied Computer Science major at George Mason University, focusing in game design, with
-                    career aspirations in being a Producer and Game Designer."
-                </p>
+                <p>Krishna is currently pursuing a Bachelors of Computer Science at George Mason University's Honors College. He also teaches CS395, Full Stack Web Development, part-time in the CEC.</p>
             </div>
         </div>
-        <div class="row my-custom-row text-center">
+        <div class="col-md-6"> <!-- Second column for the first pair -->
             <div id="person-card">
-                <!-- Person Card -->
-                <img src="assets/kj_icon.jpg" alt="Person"
-                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-                <h2>Kavon J</h2>
-                <p>Lead VR Developer</p>
-                <p>
-                    John is passionate about creating immersive virtual reality experiences that push the boundaries of
-                    technology.
-                </p>
-            </div>
-            <div id="person-card">
-                <!-- Person Card -->
-                <img src="assets/hs_icon.jpg" alt="Person"
-                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-                <h2>Huy S.</h2>
-                <p>Lead VR Developer</p>
-                <p>
-                    John is passionate about creating immersive virtual reality experiences that push the boundaries of
-                    technology.
-                </p>
+                <img src="assets/ss_icon.jpg" alt="Person" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+                <h2>Siraj S.</h2>
+                <p>Executive Producer</p>
+                <p>Siraj is an Applied Computer Science major at George Mason University, focusing on game design, with career aspirations in being a Producer and Game Designer.</p>
             </div>
         </div>
     </div>
+
+    <div class="row text-center">
+        <div class="col-md-6"> <!-- Use col-md-6 for the second pair -->
+            <div id="person-card">
+                <img src="assets/kj_icon.jpg" alt="Person" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+                <h2>Kavon J</h2>
+                <p>Lead VR Developer</p>
+                <p>John is passionate about creating immersive virtual reality experiences that push the boundaries of technology.</p>
+            </div>
+        </div>
+        <div class="col-md-6"> <!-- Second column for the second pair -->
+            <div id="person-card">
+                <img src="assets/hs_icon.jpg" alt="Person" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+                <h2>Huy S.</h2>
+                <p>Lead VR Developer</p>
+                <p>John is passionate about creating immersive virtual reality experiences that push the boundaries of technology.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script>
         VANTA.BIRDS({
